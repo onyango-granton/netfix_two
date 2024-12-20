@@ -10,7 +10,8 @@ class User(AbstractUser):
 
 
 class Customer(models.Model):
-    pass
+    user = models.CharField(max_length=100)
+    birth = models.CharField(max_length=100)
 
 
 class Company(models.Model):
