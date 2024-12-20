@@ -33,3 +33,8 @@ class User(AbstractUser):
     ##string identifier of the class
     def __str__(self):
         return self.email
+    
+    #in attempt to resolve this error during python manage.py make migrations
+    #Reverse accessor for 'User.user_permissions' clashes with reverse accessor for 'User.user_permissions'.
+    groups = None
+    user_permissions = None
