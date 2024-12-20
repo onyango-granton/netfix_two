@@ -35,7 +35,7 @@ class Service(models.Model):
     username = models.ForeignKey(User, on_delete=models.CASCADE, to_field='username', limit_choices_to={'role__ne':'CUSTOMER'})
     
     field = models.CharField(max_length=30, blank=False,null=False, choices=CHOICES)
-    date = models.DateTimeField(auto_now=True, null=False, default=timezone.now)
+    date = models.DateTimeField(auto_now=True, null=False)
 
     ## string identity of the class
     def __str__(self):
